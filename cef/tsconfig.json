@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": false,
+    "types": [],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@shared/*": ["../shared/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.vue", "../shared/**/*.ts"]
+}

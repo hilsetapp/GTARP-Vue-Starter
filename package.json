@@ -1,0 +1,27 @@
+{
+  "name": "rp-vue-starter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Современный стартер для RAGE MP / GTA RP серверов: Vue 3 + Vite + TypeScript + Pinia + типизированный мост событий CEF ↔ клиент ↔ сервер",
+  "type": "module",
+  "scripts": {
+    "dev": "vite cef",
+    "check": "vue-tsc -p cef/tsconfig.json --noEmit && tsc -p client/tsconfig.json --noEmit && tsc -p server/tsconfig.json --noEmit",
+    "build": "node scripts/build.mjs",
+    "build:dev": "node scripts/build.mjs --dev-url"
+  },
+  "keywords": ["ragemp", "rage-mp", "gta5", "gta-rp", "cef", "vue3", "vue", "vite", "typescript", "pinia", "starter", "boilerplate", "altv"],
+  "author": "hilsetapp",
+  "license": "MIT",
+  "dependencies": {
+    "pinia": "^3.0.0",
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0",
+    "vue-tsc": "^3.0.0"
+  }
+}

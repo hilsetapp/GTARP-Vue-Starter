@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rp-vue-starter CEF</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- rp-ui-kit подключаем как vendor: vanilla-либы живут мирно рядом с Vue -->
+    <link rel="stylesheet" href="./vendor/rp-ui-kit.css" />
+    <script src="./vendor/rp-ui-kit.js"></script>
+    <script type="module" src="/src/main.ts"></script>
+    <script>
+      // в игре фон страницы должен быть прозрачным, в браузере — красивый градиент
+      if (window.mp) document.body.classList.add('cef');
+    </script>
+  </body>
+</html>
