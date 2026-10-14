@@ -48,5 +48,5 @@ console.log('\n✔ готово! Дальше:');
 console.log('  • копируй содержимое server-files/ поверх папки скачанного RAGE MP сервера;');
 console.log(DEV
   ? `  • игровой браузер смотрит на ${devUrl} (горячая перезагрузка, держи \`npm run dev\` запущенным)`
-  : '  • интерфейс зашит в client_packages/cef (package://) — ничего запускать не надо;');
-console.log('  • запускай ragemp-server.exe и заходи. Команда /veh — машина для теста HUD.');
+  : '  • интерфейс зашит в client_packages/cef (package://) - ничего запускать не надо;');
+console.log('  • запускай ragemp-server.exe и заходи. Команда /veh - машина для теста HUD.');

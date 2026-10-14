@@ -12,13 +12,13 @@
  */
 import type { CefToClient, ClientToCef } from '@shared/events';
 
-/** true, когда страница открыта НЕ в игре — включаем мок-режим */
+/** true, когда страница открыта НЕ в игре - включаем мок-режим */
 export const isBrowser = !(window as any).mp;
 
 type Handler<T> = (data: T) => void;
 const handlers: { [K in keyof ClientToCef]?: Handler<ClientToCef[K]>[] } = {};
 
-/** Доставить событие в подписчиков (внутреннее — зовут игра или мок) */
+/** Доставить событие в подписчиков (внутреннее - зовут игра или мок) */
 function dispatch<K extends keyof ClientToCef>(name: K, data: ClientToCef[K]) {
   const list = (handlers[name] || []) as Handler<ClientToCef[K]>[];
   list.forEach((fn) => fn(data));
@@ -26,7 +26,7 @@ function dispatch<K extends keyof ClientToCef>(name: K, data: ClientToCef[K]) {
 
 /**
  * Входная точка для игры. RAGE дергает browser.execute и вызывает
- * window.__rp_on("hud:update", {...}) — мы разносим по подписчикам.
+ * window.__rp_on("hud:update", {...}) - мы разносим по подписчикам.
  */
 function installGlobalHook() {
   (window as any).__rp_on = (name: string, json: string) => {
@@ -38,7 +38,7 @@ function installGlobalHook() {
   };
 }
 
-/** Отправить событие в игру. В браузере — просто предупреждение в консоль. */
+/** Отправить событие в игру. В браузере - просто предупреждение в консоль. */
 export function send<K extends keyof CefToClient>(name: K, data: CefToClient[K]) {
   const mp = (window as any).mp;
   if (mp && typeof mp.trigger === 'function') {

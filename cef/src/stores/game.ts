@@ -3,7 +3,7 @@ import type { HudState, ChatMsg } from '@shared/events';
 
 export const useGameStore = defineStore('game', {
   state: () => ({
-    player: { id: 0, name: '—', money: 0 },
+    player: { id: 0, name: '-', money: 0 },
     hud: {
       speed: 0, rpm: 0, fuel: 0, gear: 0,
       belt: false, engine: false, inCar: false, street: 'Los Santos',

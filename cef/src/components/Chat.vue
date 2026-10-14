@@ -5,6 +5,7 @@ import { send, on } from '../bridge';
 
 const store = useGameStore();
 const inputOpen = ref(false);
+const inputEl = ref<HTMLInputElement>();
 const draft = ref('');
 const listEl = ref<HTMLElement>();
 
@@ -15,6 +16,11 @@ watch(() => store.chat.length, async () => {
 
 /* игра попросила открыть чат (клиент поймал T) */
 on('chat:focus', () => { inputOpen.value = true; });
+
+/* фокус ставим руками - autofocus в iframe/CEF норовит промолчать */
+watch(inputOpen, async (v) => {
+  if (v) { await nextTick(); inputEl.value?.focus(); }
+});
 
 /* в браузерной разработке эмулируем T локально (не мешаем инпутам телефона) */
 window.addEventListener('keydown', (e) => {
@@ -49,8 +55,8 @@ function submit() {
       </div>
     </div>
     <input
-      v-if="inputOpen" v-model="draft" class="input" maxlength="140" autofocus
-      placeholder="Сообщение… (Enter — отправить, Esc — закрыть)"
+      v-if="inputOpen" v-model="draft" ref="inputEl" class="input" maxlength="140"
+      placeholder="Сообщение… (Enter - отправить, Esc - закрыть)"
       @keydown.enter.stop="submit" @keydown.esc.stop="close"
     />
   </div>

@@ -10,7 +10,7 @@ const pinia = createPinia();
 app.use(pinia);
 app.mount('#app');
 
-/* Подписки на события из игры — раскладываем по стору */
+/* Подписки на события из игры - раскладываем по стору */
 const store = useGameStore(pinia);
 
 on('hud:update', (d) => Object.assign(store.hud, d));

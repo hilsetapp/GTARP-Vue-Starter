@@ -6,7 +6,7 @@ body {
   background: linear-gradient(160deg, #241d15, #171310 60%, #100e0c);
   overflow: hidden;
   font-family: 'Segoe UI', system-ui, sans-serif;
-  /* в игре фон должен быть прозрачным — см. is-browser ниже */
+  /* в игре фон должен быть прозрачным - см. is-browser ниже */
 }
 body.cef { background: transparent; }
 

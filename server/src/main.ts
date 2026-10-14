@@ -3,11 +3,11 @@
  *
  * Минимальный рабочий демо-контур:
  *  - игрок заходит → спавн, моделькa, приветствие в его CEF;
- *  - /veh sultan — выдать машину (сел → HUD в CEF оживает сам,
+ *  - /veh sultan - выдать машину (сел → HUD в CEF оживает сам,
  *    данные ему шлёт клиентский цикл);
  *  - чат: CEF игрока прислал текст → рассылаем всем.
  *
- * События в CEF отправляем ТОЛЬКО через помощника emitTo —
+ * События в CEF отправляем ТОЛЬКО через помощника emitTo -
  * так типы снова проверяет TypeScript.
  */
 import type { ClientToCef } from '../../shared/events';
@@ -27,13 +27,13 @@ function emitAll<K extends keyof ClientToCef>(name: K, data: ClientToCef[K]) {
 mp.events.add('playerJoin', (player: MpPlayer) => {
   player.model = mp.joaat('a_m_y_skater_01');
   player.dimension = 0;
-  // координаты спавна — поменяй под свой проект
+  // координаты спавна - поменяй под свой проект
   player.spawn(new mp.Vector3(-1037.6, -2738.3, 20.2));
 
   // ui:ready придёт позже, чем playerJoin → шлём с небольшой задержкой
   setTimeout(() => {
     emitTo(player, 'player:spawned', { id: player.id, name: player.name, money: 12450 });
-    emitTo(player, 'chat:push', { tag: 'SYS', text: `привет, ${player.name}! Это rp-vue-starter. Дай себе машину: /veh — и катайся, HUD оживёт.`, cls: 'system' });
+    emitTo(player, 'chat:push', { tag: 'SYS', text: `привет, ${player.name}! Это rp-vue-starter. Дай себе машину: /veh - и катайся, HUD оживёт.`, cls: 'system' });
   }, 1500);
 
   emitAll('chat:push', { tag: 'SYS', text: `${player.name} подключился к серверу`, cls: 'system' });
@@ -51,7 +51,7 @@ mp.events.add('chat:send', (player: MpPlayer, json: string) => {
   emitAll('chat:push', { nick: player.name, text });
 });
 
-/* ── /veh [модель] — демо-команда выдачи машины ── */
+/* ── /veh [модель] - демо-команда выдачи машины ── */
 mp.events.addCommand('veh', (player: MpPlayer, _full: string, model?: string) => {
   const name = model || 'sultan';
   const pos = player.position;

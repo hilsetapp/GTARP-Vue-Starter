@@ -35,10 +35,10 @@ if (isBrowser) {
     <!-- Телефон из rp-ui-kit (пример встраивания vanilla-виджета) -->
     <PhoneDemo />
 
-    <!-- Мок-панель сервера — только в разработке в браузере -->
+    <!-- Мок-панель сервера - только в разработке в браузере -->
     <DevPanel v-if="isBrowser" />
 
     <!-- Хоткеи-подсказка -->
-    <div class="hint" v-if="isBrowser">F2 — скрыть/показать HUD · T/Enter — чат</div>
+    <div class="hint" v-if="isBrowser">F2 - скрыть/показать HUD · T/Enter - чат</div>
   </div>
 </template>
