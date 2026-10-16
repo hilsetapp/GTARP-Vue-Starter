@@ -1,4 +1,4 @@
-**English** | [Русский](README.md)
+[Русский](README.md) | **English**
 
 # RP VUE STARTER
 
