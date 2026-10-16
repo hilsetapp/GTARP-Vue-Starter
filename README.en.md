@@ -1,12 +1,10 @@
+**English** | [Русский](README.md)
+
 # RP VUE STARTER
 
 A starter kit for RAGE MP / GTA RP servers: Vue 3 + Vite + TypeScript + Pinia.
 You write the game UI as a normal website, and every event between the UI,
 the game client and the server is typed.
-
-🇷🇺 Main docs are in Russian: [README.md](README.md) - [GUIDE.md](GUIDE.md).
-The project is Russian-first on purpose (that's the GTA RP community it serves),
-but this page is enough to get you going.
 
 ## Why it exists
 
@@ -21,13 +19,13 @@ browser with a mock-server panel - drag speed sliders, push chat messages, fake 
 player join. Same event pipeline as in the actual game.
 
 Ships with a small working UI: speedometer (speed, rpm, fuel, street), chat on `T`,
-a player badge, plus a phone from [rp-ui-kit](https://github.com/hilsetapp/rp-ui-kit)
+a player badge, plus a phone from [rp-ui-kit](https://github.com/hilsetapp/Gtarp-ui-kit)
 as an example of embedding vanilla libs. Type `/veh` in game and drive - the HUD runs by itself.
 
 ## Try it
 
 ```bash
-git clone https://github.com/hilsetapp/rp-vue-starter.git
+git clone https://github.com/hilsetapp/GTARP-Vue-Starter.git
 cd rp-vue-starter
 npm i
 npm run dev

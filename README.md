@@ -1,11 +1,11 @@
+[English](README.en.md) | **Русский**
+
 # RP VUE STARTER
 
 Стартер для RAGE MP / GTA RP серверов: Vue 3 + Vite + TypeScript + Pinia.
 Интерфейс пишешь как обычный сайт, события между интерфейсом, клиентом и сервером типизированы.
 
 ![баннер](assets/og-banner.png)
-
-[English readme (коротко)](README.en.md)
 
 ## Зачем
 
@@ -21,13 +21,13 @@
 вызываешь «игрок зашёл». События идут тем же маршрутом, что и в игре.
 
 Из коробки работает мини-UI: спидометр (скорость, обороты, бензин, улица), чат на кнопке T,
-плашка игрока справа сверху, телефон из [rp-ui-kit](https://github.com/hilsetapp/rp-ui-kit)
+плашка игрока справа сверху, телефон из [rp-ui-kit](https://github.com/hilsetapp/Gtarp-ui-kit)
 как пример подключения vanilla-библиотек. Дашь себе машину командой `/veh` - HUD оживает сам.
 
 ## Попробовать
 
 ```bash
-git clone https://github.com/hilsetapp/rp-vue-starter.git
+git clone https://github.com/hilsetapp/GTARP-Vue-Starter.git
 cd rp-vue-starter
 npm i
 npm run dev
@@ -75,7 +75,7 @@ scripts/   build.mjs - собирает всё в server-files/
 - мок под транспорт/оружие/здоровье
 - ветка под alt:V (мост уже изолирован, порт небольшой)
 
-Чего-то не хватает - [Issues](https://github.com/hilsetapp/rp-vue-starter/issues).
+Чего-то не хватает - [Issues](https://github.com/hilsetapp/GTARP-Vue-Starter/issues).
 
 ## Лицензия
 

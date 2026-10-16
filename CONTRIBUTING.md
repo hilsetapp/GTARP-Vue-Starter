@@ -5,7 +5,7 @@
 ## У себя
 
 ```bash
-git clone https://github.com/hilsetapp/rp-vue-starter.git
+git clone https://github.com/hilsetapp/GTARP-Vue-Starter.git
 cd rp-vue-starter
 npm i
 npm run dev
